@@ -1,27 +1,18 @@
-let x = "ok...";
-console.log(x);
+function shifting(arr, shiftingValue) {
+    console.log("Input: ", arr)
+    let length = arr.length;
+    for (let i = 0; i < shiftingValue; i++) {
+        let b = arr[0];
 
-function leftRotate(arr, d, n) {
-    for (i = 0; i < d; i++)
-        leftRotatebyOne(arr, n);
+        for (let j = 0; j < length; j++) {
+            arr[j] = arr[j + 1];
+        }
+        arr[length - 1] = b;
+    }
+    console.log("Output: ", arr)
 }
 
-function leftRotatebyOne(arr, n) {
-    var i, temp;
-    temp = arr[0];
-    for (i = 0; i < n - 1; i++)
-        arr[i] = arr[i + 1];
-    arr[n - 1] = temp;
-}
+let InputArray = [1, 2, 3, 4, 5]
+let ShiftingValue = 2;
 
-/* utility function to print an array */
-function printArray(arr, n) {
-    for (i = 0; i < n; i++)
-        document.write(arr[i] + " ");
-}
-
-// Driver program to test above functions
-
-var arr = [1, 2, 3, 4, 5, 6, 7];
-leftRotate(arr, 2, 7);
-printArray(arr, 7);
+shifting(InputArray, ShiftingValue);
