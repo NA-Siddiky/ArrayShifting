@@ -1,5 +1,5 @@
-function shifting(arr, shiftingValue) {
-    console.log("Input: ", arr)
+function ArrayShifting(arr, shiftingValue) {
+    console.log("Input:  ", arr)
     let length = arr.length;
     for (let i = 0; i < shiftingValue; i++) {
         let b = arr[0];
@@ -14,5 +14,4 @@ function shifting(arr, shiftingValue) {
 
 let InputArray = [1, 2, 3, 4, 5]
 let ShiftingValue = 2;
-
-shifting(InputArray, ShiftingValue);
+ArrayShifting(InputArray, ShiftingValue);
